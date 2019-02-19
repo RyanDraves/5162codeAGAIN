@@ -23,16 +23,18 @@ public class RobotMap {
   // following variables to use with your drivetrain subsystem.
   // public static int leftMotor = 1;
   // public static int rightMotor = 2;
- // public static Spark m_left = new Spark(1);
-//  public static Spark m_right = new Spark(2);
+  public static Spark m_left = new Spark(0);            //:LAKJSDL:KAJSDL:KAJSD:LKAJSDL:KJASDJLK
+  public static Spark m_right = new Spark(1);
+  public static Spark m_arm_bottom = new Spark(2);
+  public static Spark m_arm_top = new Spark(3);
 
   /***********************************************************************
    * navX-MXP:
    * - Communication via RoboRIO MXP (SPI, I2C, TTL UART) and USB.            
    * - See http://navx-mxp.kauailabs.com/guidance/selecting-an-interface.
-   * 
+   * or Onboar
    * navX-Micro:
-   * - Communication via I2C (RoboRIO MXP or Onboard) and USB.
+   * - Communication via I2C (RoboRIO MXP d) and USB.
    * - See http://navx-micro.kauailabs.com/guidance/selecting-an-interface.
    * 
    * Multiple navX-model devices on a single robot are supported.

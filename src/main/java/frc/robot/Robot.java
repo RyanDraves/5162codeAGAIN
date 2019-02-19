@@ -17,6 +17,8 @@ import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.RobotMap;
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.Arm;
+import frc.robot.commands.ArmMotion;
 
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
@@ -37,6 +39,7 @@ public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static OI m_oi;
   public static DriveTrain drivetrain;
+  public static Arm arm;
   //public static RobotMap rmap;
 
   Command m_autonomousCommand;
@@ -152,6 +155,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+    //tankDrive(left_stick.getY(), right_stick.getY());           //BAD //NO WORK
   }
 
   /**

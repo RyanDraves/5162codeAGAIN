@@ -9,7 +9,6 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Spark;
-import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
@@ -28,15 +27,10 @@ public class DriveTrain extends Subsystem {
     
   }
 
-  public Spark m_frontLeft = new Spark(1);
-  public Spark m_rearLeft = new Spark(2);
-  SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
+  public Spark l_motor = RobotMap.m_left;
+  public Spark r_motor = RobotMap.m_right;
 
-  public Spark m_frontRight = new Spark(3);
-  public Spark m_rearRight = new Spark(4);
-  SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
-
-  public DifferentialDrive m_drive = new DifferentialDrive(m_left, m_right);
+  public DifferentialDrive m_drive = new DifferentialDrive(RobotMap.m_left, RobotMap.m_right);
 
   @Override
   public void initDefaultCommand() {
