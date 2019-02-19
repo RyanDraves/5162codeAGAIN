@@ -23,11 +23,18 @@ public class OI {
   // number it is.
   // Joystick stick = new Joystick(port);'a''a'
   // Button button = new JoystickButton(stick, buttonNumber);
+  
+  // Member variable initialization
   public Joystick left_stick = new Joystick(0);
   public Joystick right_stick = new Joystick(1);
-  Button armUpButton = new JoystickButton(left_stick, 0);
-  Button armDownButton = new JoystickButton(right_stick, 0);
-  armUpButton.whenHeld(new ArmUp());
+  public Button armUpButton = new JoystickButton(left_stick, 0);
+  public Button armDownButton = new JoystickButton(right_stick, 0);
+  
+  // Default constructor
+  public OI() {
+    // See https://stackoverflow.com/questions/579445/java-constructors on how constructors work
+    armUpButton.whenHeld(new ArmUp());
+  }
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.
